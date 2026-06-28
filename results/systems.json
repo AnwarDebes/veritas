@@ -1,0 +1,100 @@
+{
+  "host": {
+    "python": "3.14.3",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "dataset": "prompt_injection",
+  "scale_clauses": [
+    {
+      "clauses": 8,
+      "features": 48,
+      "n_clauses_nonempty": 8,
+      "verify_us": 12660.20833342433,
+      "decided": 12,
+      "queries": 12
+    },
+    {
+      "clauses": 16,
+      "features": 48,
+      "n_clauses_nonempty": 15,
+      "verify_us": 23392.516665808216,
+      "decided": 12,
+      "queries": 12
+    },
+    {
+      "clauses": 32,
+      "features": 48,
+      "n_clauses_nonempty": 29,
+      "verify_us": 54274.566666511724,
+      "decided": 12,
+      "queries": 12
+    },
+    {
+      "clauses": 64,
+      "features": 48,
+      "n_clauses_nonempty": 59,
+      "verify_us": 139368.44166710216,
+      "decided": 12,
+      "queries": 12
+    },
+    {
+      "clauses": 128,
+      "features": 48,
+      "n_clauses_nonempty": 125,
+      "verify_us": 192062.13333291086,
+      "decided": 12,
+      "queries": 12
+    }
+  ],
+  "scale_features": [
+    {
+      "clauses": 32,
+      "features": 16,
+      "verify_us": 34029.51666612353,
+      "decided": 12,
+      "queries": 12
+    },
+    {
+      "clauses": 32,
+      "features": 32,
+      "verify_us": 65262.758333119564,
+      "decided": 12,
+      "queries": 12
+    },
+    {
+      "clauses": 32,
+      "features": 64,
+      "verify_us": 93203.56666648877,
+      "decided": 12,
+      "queries": 12
+    },
+    {
+      "clauses": 32,
+      "features": 96,
+      "verify_us": 144769.47499982393,
+      "decided": 12,
+      "queries": 12
+    },
+    {
+      "clauses": 32,
+      "features": 128,
+      "verify_us": 124801.60833365517,
+      "decided": 12,
+      "queries": 12
+    }
+  ],
+  "backend_compare": {
+    "clauses": 32,
+    "features": 48,
+    "queries": 12,
+    "z3_us": 50550.10000008527,
+    "pysat_us": 3634.2916661548466
+  },
+  "property_cost_us": {
+    "invariant": 65282.6700003061,
+    "robustness_radius": 68203.5249992623,
+    "monotone": 106672.34000102326
+  }
+}

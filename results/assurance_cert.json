@@ -1,0 +1,42 @@
+{
+  "host": {
+    "python": "3.14.3",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "n_sessions": 24,
+  "tampers": {
+    "modify_status": {
+      "trials": 24,
+      "detection_rate": 1.0
+    },
+    "modify_counterexample": {
+      "trials": 24,
+      "detection_rate": 1.0
+    },
+    "modify_guard_clause": {
+      "trials": 24,
+      "detection_rate": 1.0
+    },
+    "delete_entry": {
+      "trials": 24,
+      "detection_rate": 1.0
+    },
+    "insert_entry": {
+      "trials": 24,
+      "detection_rate": 1.0
+    },
+    "reorder_entries": {
+      "trials": 24,
+      "detection_rate": 1.0
+    }
+  },
+  "security_property": "tamper-evidence (SHA-256 hash chain + Merkle root) + symmetric authentication (HMAC-SHA-256); prover-independent counterexample re-evaluation",
+  "clean_verify_rate": 1.0,
+  "recheck_pass_rate": 1.0,
+  "counterexamples_reevaluated": 229,
+  "counterexample_independent_rate": 1.0,
+  "forged_signature_detection_rate": 1.0,
+  "forged_signature_caught_by_sig_rate": 1.0
+}

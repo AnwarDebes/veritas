@@ -1,0 +1,271 @@
+{
+  "host": {
+    "python": "3.14.3",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "per_seed": [
+    {
+      "seed": 0,
+      "n_targets": 8,
+      "bypass_initial": 7,
+      "bypass_empirical": 8,
+      "bypass_constructive": 0,
+      "acc_initial": 0.6810344827586207,
+      "acc_empirical": 0.6120689655172413,
+      "acc_constructive": 0.6982758620689655,
+      "empirical_history": [
+        7,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "lost_guarantee": 1
+    },
+    {
+      "seed": 1,
+      "n_targets": 8,
+      "bypass_initial": 8,
+      "bypass_empirical": 8,
+      "bypass_constructive": 0,
+      "acc_initial": 0.6724137931034483,
+      "acc_empirical": 0.5862068965517241,
+      "acc_constructive": 0.7068965517241379,
+      "empirical_history": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "lost_guarantee": 0
+    },
+    {
+      "seed": 2,
+      "n_targets": 8,
+      "bypass_initial": 6,
+      "bypass_empirical": 8,
+      "bypass_constructive": 0,
+      "acc_initial": 0.7068965517241379,
+      "acc_empirical": 0.5258620689655172,
+      "acc_constructive": 0.75,
+      "empirical_history": [
+        6,
+        7,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "lost_guarantee": 2
+    },
+    {
+      "seed": 3,
+      "n_targets": 8,
+      "bypass_initial": 6,
+      "bypass_empirical": 8,
+      "bypass_constructive": 0,
+      "acc_initial": 0.75,
+      "acc_empirical": 0.5862068965517241,
+      "acc_constructive": 0.7586206896551724,
+      "empirical_history": [
+        6,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "lost_guarantee": 2
+    },
+    {
+      "seed": 4,
+      "n_targets": 8,
+      "bypass_initial": 6,
+      "bypass_empirical": 8,
+      "bypass_constructive": 0,
+      "acc_initial": 0.7155172413793104,
+      "acc_empirical": 0.6379310344827587,
+      "acc_constructive": 0.7155172413793104,
+      "empirical_history": [
+        6,
+        7,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "lost_guarantee": 2
+    },
+    {
+      "seed": 5,
+      "n_targets": 8,
+      "bypass_initial": 6,
+      "bypass_empirical": 8,
+      "bypass_constructive": 0,
+      "acc_initial": 0.6896551724137931,
+      "acc_empirical": 0.5344827586206896,
+      "acc_constructive": 0.7068965517241379,
+      "empirical_history": [
+        6,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "lost_guarantee": 2
+    },
+    {
+      "seed": 6,
+      "n_targets": 8,
+      "bypass_initial": 7,
+      "bypass_empirical": 8,
+      "bypass_constructive": 0,
+      "acc_initial": 0.6551724137931034,
+      "acc_empirical": 0.5344827586206896,
+      "acc_constructive": 0.6896551724137931,
+      "empirical_history": [
+        7,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "lost_guarantee": 1
+    },
+    {
+      "seed": 7,
+      "n_targets": 8,
+      "bypass_initial": 8,
+      "bypass_empirical": 8,
+      "bypass_constructive": 0,
+      "acc_initial": 0.6637931034482759,
+      "acc_empirical": 0.5,
+      "acc_constructive": 0.6637931034482759,
+      "empirical_history": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "lost_guarantee": 0
+    }
+  ],
+  "summary": {
+    "n_targets": {
+      "mean": 8.0,
+      "std": 0.0,
+      "n": 8,
+      "ci95_lo": 8.0,
+      "ci95_hi": 8.0,
+      "min": 8.0,
+      "max": 8.0
+    },
+    "bypass_initial": {
+      "mean": 6.75,
+      "std": 0.8864052604279183,
+      "n": 8,
+      "ci95_lo": 6.135752492882552,
+      "ci95_hi": 7.364247507117448,
+      "min": 6.0,
+      "max": 8.0
+    },
+    "bypass_empirical": {
+      "mean": 8.0,
+      "std": 0.0,
+      "n": 8,
+      "ci95_lo": 8.0,
+      "ci95_hi": 8.0,
+      "min": 8.0,
+      "max": 8.0
+    },
+    "bypass_constructive": {
+      "mean": 0.0,
+      "std": 0.0,
+      "n": 8,
+      "ci95_lo": 0.0,
+      "ci95_hi": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "acc_initial": {
+      "mean": 0.6918103448275863,
+      "std": 0.031167612647398434,
+      "n": 8,
+      "ci95_lo": 0.6702122911763427,
+      "ci95_hi": 0.7134083984788299,
+      "min": 0.6551724137931034,
+      "max": 0.75
+    },
+    "acc_empirical": {
+      "mean": 0.564655172413793,
+      "std": 0.04788724653995956,
+      "n": 8,
+      "ci95_lo": 0.5314710035882507,
+      "ci95_hi": 0.5978393412393354,
+      "min": 0.5,
+      "max": 0.6379310344827587
+    },
+    "acc_constructive": {
+      "mean": 0.7112068965517242,
+      "std": 0.03091108472416533,
+      "n": 8,
+      "ci95_lo": 0.6897866076818808,
+      "ci95_hi": 0.7326271854215676,
+      "min": 0.6637931034482759,
+      "max": 0.7586206896551724
+    },
+    "clauses_added": {
+      "mean": 104.0,
+      "std": 0.0,
+      "n": 8,
+      "ci95_lo": 104.0,
+      "ci95_hi": 104.0,
+      "min": 104.0,
+      "max": 104.0
+    },
+    "empirical_lost_guarantee": {
+      "mean": 1.25,
+      "std": 0.8864052604279183,
+      "n": 8,
+      "ci95_lo": 0.6357524928825515,
+      "ci95_hi": 1.8642475071174485,
+      "min": 0.0,
+      "max": 2.0
+    }
+  }
+}
