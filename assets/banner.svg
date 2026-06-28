@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-label="VERITAS: VERified Interpretable Tsetlin ASsurance">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="0.55" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#042f2e"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="word" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="tick" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0 H0 V34" fill="none" stroke="#1e293b" stroke-width="1" opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="400" fill="url(#bg)"/>
+  <rect width="1280" height="400" fill="url(#grid)"/>
+
+  <!-- faint proof-quantifier watermark on the right: a property over ALL inputs -->
+  <text x="1170" y="232" text-anchor="end" font-family="Cambria Math, Georgia, serif"
+        font-size="300" fill="#0d9488" opacity="0.10">&#8704;</text>
+
+  <!-- ============ logo mark ============ -->
+  <g transform="translate(67,112) scale(1.30)">
+    <path d="M24 30 Q24 23 31 21 L61 13 Q64 12 67 13 L97 21 Q104 23 104 30
+             L104 66 Q104 100 64 117 Q24 100 24 66 Z"
+          fill="#0a1424" stroke="url(#edge)" stroke-width="5" stroke-linejoin="round"/>
+    <g stroke="#134e4a" stroke-width="2.4" opacity="0.55" stroke-linecap="round">
+      <line x1="39" y1="44" x2="89" y2="44"/>
+      <line x1="39" y1="55" x2="89" y2="55"/>
+      <line x1="39" y1="66" x2="79" y2="66"/>
+    </g>
+    <path d="M40 58 L57 82 L92 36" fill="none" stroke="url(#tick)"
+          stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="86.5" y="30.5" width="11" height="11" rx="2.2" fill="#5eead4"/>
+  </g>
+
+  <!-- ============ wordmark + taglines ============ -->
+  <text x="248" y="172" font-family="Segoe UI, Helvetica, Arial, sans-serif"
+        font-size="104" font-weight="800" fill="url(#word)" letter-spacing="10">VERITAS</text>
+  <text x="252" y="214" font-family="Segoe UI, Helvetica, Arial, sans-serif"
+        font-size="25" font-weight="600" fill="#94a3b8" letter-spacing="3.5">VER<tspan fill="#5eead4">ified</tspan> <tspan fill="#94a3b8">I</tspan><tspan fill="#5eead4">nterpretable</tspan> <tspan fill="#94a3b8">T</tspan><tspan fill="#5eead4">setlin</tspan> <tspan fill="#94a3b8">AS</tspan><tspan fill="#5eead4">surance</tspan></text>
+  <text x="252" y="252" font-family="Segoe UI, Helvetica, Arial, sans-serif"
+        font-size="21" font-weight="400" fill="#64748b">A guardrail you can prove, that knows where its proof stops.</text>
+
+  <!-- divider -->
+  <line x1="252" y1="286" x2="1112" y2="286" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- ============ four pillars ============ -->
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="19" font-weight="600">
+    <!-- proof or counterexample -->
+    <g transform="translate(252,326)">
+      <path d="M2 14 L8 14 M5 8 L5 22" stroke="#2dd4bf" stroke-width="2.6" stroke-linecap="round"/>
+      <text x="20" y="21" fill="#cbd5e1">proof or counterexample</text>
+    </g>
+    <!-- constructive repair -->
+    <g transform="translate(530,326)">
+      <path d="M5 8 V22 M-2 15 H12" stroke="#2dd4bf" stroke-width="2.6" stroke-linecap="round"/>
+      <text x="20" y="21" fill="#cbd5e1">constructive repair</text>
+    </g>
+    <!-- verified abstention -->
+    <g transform="translate(762,326)">
+      <path d="M2 8 V22 M9 8 V22" stroke="#2dd4bf" stroke-width="2.6" stroke-linecap="round"/>
+      <text x="20" y="21" fill="#cbd5e1">verified abstention</text>
+    </g>
+    <!-- auditable certificate -->
+    <g transform="translate(982,326)">
+      <rect x="0" y="8" width="13" height="13" rx="2.5" fill="none" stroke="#2dd4bf" stroke-width="2.4"/>
+      <path d="M3.5 14.5 L6 17 L10 11" fill="none" stroke="#2dd4bf" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="22" y="21" fill="#cbd5e1">auditable certificate</text>
+    </g>
+  </g>
+</svg>
