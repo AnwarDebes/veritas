@@ -1,0 +1,21 @@
+{
+  "name": "jailbreak",
+  "source": "jackhhao/jailbreak-classification",
+  "license": "apache-2.0",
+  "splits": {
+    "train": {
+      "rows": 1044,
+      "pos": 527,
+      "neg": 517,
+      "sha256": "9b0c75d2661b53fc44d3e79bed31a3d89c6bcbe469cbc27fc92b0de889fbb41d",
+      "file": "train.csv"
+    },
+    "test": {
+      "rows": 262,
+      "pos": 139,
+      "neg": 123,
+      "sha256": "ec81153dc7a65e43f63f7a6e0622e97e486ab9c964b61969f3bdbe6847c3b1d4",
+      "file": "test.csv"
+    }
+  }
+}

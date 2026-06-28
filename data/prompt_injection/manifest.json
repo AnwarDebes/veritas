@@ -1,0 +1,21 @@
+{
+  "name": "prompt_injection",
+  "source": "deepset/prompt-injections",
+  "license": "apache-2.0",
+  "splits": {
+    "train": {
+      "rows": 546,
+      "pos": 203,
+      "neg": 343,
+      "sha256": "0fd4de3a9dd8e46abe730999838730785d30db270ea8ac5678dea3ca1f71d2de",
+      "file": "train.csv"
+    },
+    "test": {
+      "rows": 116,
+      "pos": 60,
+      "neg": 56,
+      "sha256": "f7d2691131fba8e9f34fb2ce62437a2254ad5b27235251df3a6678a733bc5aef",
+      "file": "test.csv"
+    }
+  }
+}
