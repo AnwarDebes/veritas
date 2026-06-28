@@ -1,0 +1,44 @@
+{
+  "project": "VERITAS",
+  "one_line": "The first formally verified, competence-aware interpretable LLM guardrail (4th pillar after THGTM, TRACE, REINS).",
+  "primary_prior_art": {
+    "key": "przybysz2023verifying",
+    "title": "Verifying Properties of Tsetlin Machines",
+    "authors": "Przybysz, Bhattarai, Persia, Ozaki, Granmo, Sharma",
+    "venue": "ISTM 2023 / IEEE Xplore 10454997",
+    "url": "https://arxiv.org/abs/2303.14464",
+    "verified": true,
+    "why_critical": "Already gives the EXACT TM->propositional/CNF encoding (proven correct), feeds it to a SAT solver (Glucose), and formally verifies epsilon-robustness, equivalence and similarity over all inputs on MNIST and IMDB, with SAT instances as counterexamples and a BNN-verification comparison. Granmo (TM inventor) is a co-author. VERITAS MUST cite this as the foundation it builds on and must NOT claim TM verification / Boolean encoding / robustness-radius / equivalence / TM-on-text-verification as novel."
+  },
+  "must_not_claim_novel": [
+    "First formal verification / exact Boolean (CNF) encoding of a trained Tsetlin Machine (Przybysz et al. 2023).",
+    "Adversarial / epsilon-(Hamming)-robustness radius verification of a TM, and SAT-derived counterexamples (Przybysz et al. 2023).",
+    "TM equivalence/similarity checking; verifying a TM text classifier (Przybysz et al. 2023, on IMDB).",
+    "SAT/SMT/MILP verification of discrete classifiers in general (BNNs: Narodytska 2018; trees/rule-lists & formal explanations: Ignatiev 2019; NNs: Katz 2017).",
+    "Selective prediction / abstention / reject option / OOD / conformal (Chow 1970; Geifman & El-Yaniv 2017; El-Yaniv & Wiener 2010; Angelopoulos & Bates 2023).",
+    "Counterexample-guided synthesis/refinement and shielding (Solar-Lezama 2006; Clarke 2000; Bloem 2015; Alshiekh 2018).",
+    "Machine-checkable UNSAT proofs / certifying algorithms (Wetzler/Heule DRAT 2014; McConnell 2011).",
+    "Hash-chain / Merkle / HMAC tamper-evident logs (Schneier-Kelsey 1998; RFC 6962; RFC 2104) -- reused from TRACE."
+  ],
+  "novelty_is_a_conjunction": [
+    "Applying exact TM verification to the LLM-GUARDRAIL use case (all prior TM verification targets generic MNIST/IMDB, no guardrail/safety-invariant framing; all deployed guardrails are opaque neural nets validated only by red-teaming).",
+    "New guardrail property classes beyond robustness/equivalence: no-bypass (must-flag) invariants, trigger-necessity / no-spurious-cue, and monotonicity as a soundness check.",
+    "Constructive verification-guided repair: a sound clause-append operator that provably enforces an obligation, established AFTER showing empirical counterexample-retraining cannot reach or certify zero bypasses (and can lose guarantees).",
+    "Verified-competence envelope: abstain on inputs outside a verified trigger-necessity region -- a CERTIFIED accept/reject boundary, vs a softmax/margin threshold -- turning silent off-distribution failure into auditable escalation.",
+    "A tamper-evident, prover-independent assurance certificate of the verification outcome (counterexamples re-evaluable with no solver)."
+  ],
+  "closest_prior_work_and_difference": [
+    "Przybysz et al. 2023 -- the encoding + robustness/equivalence; VERITAS reuses these and adds property classes + repair + envelope + certificate + the guardrail framing.",
+    "Llama Guard / ShieldGemma / WildGuard / Constitutional Classifiers -- strong but opaque neural guardrails, no global guarantees, validated only by benchmark; VERITAS is verifiable but compact (lower raw accuracy, reported honestly).",
+    "Selective prediction (Geifman & El-Yaniv) -- score-threshold abstention; VERITAS's boundary is a verified precondition.",
+    "CEGIS/shielding -- the loop technique VERITAS's constructive repair instantiates, not invents."
+  ],
+  "reviewer_pitfalls_preempted": [
+    "Do not over-claim TM verification novelty -- cite Przybysz et al. prominently (done in abstract, intro, related work, and conclusion).",
+    "Report compact-guard accuracy honestly and frame the verifiability/accuracy trade-off as the E1 frontier, not hide it.",
+    "Be precise that verification is over the booleanised FEATURE space, not raw strings (stated in setting + limitations).",
+    "State HMAC = symmetric authentication, not non-repudiation.",
+    "Multi-seed (8) results with the verifier's own soundness cross-checked across z3/PySAT/brute (E1) to pre-empt 'is your verifier correct?'."
+  ],
+  "name_note": "VERITAS = VERified Interpretable Tsetlin ASsurance. 'Veritas' (truth) fits the transparency theme; minor clash with unrelated commercial products, acceptable for a research artifact with a specific expansion."
+}
