@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "veritaskit"
-version = "1.0.0"
+version = "1.1.0"
 description = "VERITAS: a formally verified, competence-aware interpretable guardrail for LLMs"
 readme = "README.md"
 requires-python = ">=3.9"

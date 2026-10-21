@@ -4,6 +4,22 @@ All notable changes to VERITAS are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## [1.1.0] - 2026-10-21
+
+### Added
+- **Live prover** (`live/`, published at https://anwardebes.github.io/veritas/): the
+  method running in the browser on the TRACE content guard. A small CDCL solver
+  decides `must_flag` and `trigger_necessity` over all 2^256 feature inputs, turns
+  counterexamples back into readable prompts that are re-checked on the guard,
+  repairs a bypass with one weighted clause whose minimal weight is found by binary
+  search, and re-checks every UNSAT answer with an independent RUP proof checker.
+  Proofs download as DIMACS + DRUP and verify with drat-trim.
+- A word audit (no single feature of the shipped guard forces a block) and a
+  shortest false-alarm search, with a side-effect check of each repair on the
+  662 labelled prompts.
+- Node tests for the solver, the proof checker and the encoding, run in CI before
+  each deployment.
+
 ## [1.0.0] - 2026-06-25
 
 First public release accompanying the paper.
@@ -31,7 +47,7 @@ First public release accompanying the paper.
   tests; figure- and number-generation scripts; the LaTeX paper.
 
 ### Fixed (pre-release audit)
-A multi-agent soundness audit before release found and corrected:
+A soundness audit before release found and corrected:
 - **Prover-independent check**, `verify_assurance` now genuinely re-evaluates each
   REFUTED counterexample on the included guard (reconstructing the obligation from
   the recorded spec and failing closed if it cannot), instead of accepting it

@@ -10,7 +10,8 @@
 [![Tests](https://img.shields.io/badge/tests-31%20passing-2dd4bf)](tests/)
 [![Backends](https://img.shields.io/badge/backends-z3%20%7C%20PySAT%20%7C%20brute-0d9488)](veritaskit/verify.py)
 [![Paper](https://img.shields.io/badge/paper-PDF-b31b1b)](paper/veritas.pdf)
-[![Status](https://img.shields.io/badge/release-v1.0.0-0f766e)](CHANGELOG.md)
+[![Status](https://img.shields.io/badge/release-v1.1.0-0f766e)](CHANGELOG.md)
+[![Live prover](https://img.shields.io/badge/live%20prover-open%20in%20your%20browser-2dd4bf)](https://anwardebes.github.io/veritas/)
 
 <br/>
 
@@ -30,6 +31,16 @@ an auditor re-checks without ever trusting the prover.
 </div>
 
 ---
+
+## Live prover
+
+**[Open the live prover](https://anwardebes.github.io/veritas/)**, the method running in your browser on a real prompt-injection guard.
+
+https://github.com/user-attachments/assets/3a0f45d6-cfc5-4cac-93de-79925487d50b
+
+Type an attack and the page states a claim: *every prompt that contains these words is blocked*. A SAT solver written for the page checks it against all 2<sup>256</sup> inputs the guard can see. On the shipped [TRACE](https://github.com/AnwarDebes/TRACE) guard it finds a bypass in under a second (*"Which ignore previous instructions"* gets through), repairs the guard with one weighted clause, proves the repaired guard, and re-checks that proof without the solver. Download the formula and the proof and run `drat-trim` on them yourself.
+
+Two more questions no test set can answer: is any word always blocked (none is, padding beats every one), and does the guard block prompts with no attack words at all (it does: *"Your nun"*). Code and tests are in [`live/`](live/).
 
 ## Why this exists
 
@@ -55,8 +66,8 @@ answer is a **proof**, or a **concrete counterexample**, never a probability.
 > make possible, and it cites that work as the foundation it builds on.
 
 VERITAS is the fourth pillar of an interpretable agent-safety line:
-[THGTM](../THGTM) (learn), [TRACE](../TRACE) (detect and certify),
-[REINS](../REINS) (enforce), and the piece that makes the guard itself an object of
+[THGTM](https://github.com/AnwarDebes/THGTM) (learn), [TRACE](https://github.com/AnwarDebes/TRACE) (detect and certify),
+[REINS](https://github.com/AnwarDebes/reins) (enforce), and the piece that makes the guard itself an object of
 proof. The accompanying paper is [`paper/veritas.pdf`](paper/veritas.pdf).
 
 ## What makes it new (the contribution is the conjunction)
@@ -132,6 +143,7 @@ All numbers come from `python experiments/run_all.py` on a single CPU, over 8 se
 | `veritaskit/harden.py`, `envelope.py` | empirical hardening vs constructive repair; the verified-competence envelope |
 | `veritaskit/ledger.py`, `engine.py` | the tamper-evident, prover-independent assurance certificate |
 | `experiments/` | six reproducible experiments (E1 to E6) |
+| `live/` | the live prover: a CDCL solver, a RUP proof checker and constructive repair in the browser, on the TRACE guard |
 | `paper/veritas.tex` | the paper source |
 
 ## Limitations
