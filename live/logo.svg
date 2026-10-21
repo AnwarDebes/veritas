@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="VERITAS logo: a verified guardrail">
+  <defs>
+    <linearGradient id="badge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#042f2e"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="tick" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- shield body: the guardrail -->
+  <path d="M24 30 Q24 23 31 21 L61 13 Q64 12 67 13 L97 21 Q104 23 104 30
+           L104 66 Q104 100 64 117 Q24 100 24 66 Z"
+        fill="url(#badge)" stroke="url(#edge)" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- faint scan lines: the proof ranges over ALL inputs -->
+  <g stroke="#134e4a" stroke-width="2.4" opacity="0.5" stroke-linecap="round">
+    <line x1="39" y1="44" x2="89" y2="44"/>
+    <line x1="39" y1="55" x2="89" y2="55"/>
+    <line x1="39" y1="66" x2="79" y2="66"/>
+  </g>
+
+  <!-- the V that is also the verification tick -->
+  <path d="M40 58 L57 82 L92 36" fill="none" stroke="url(#tick)"
+        stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- QED square: end of proof -->
+  <rect x="86.5" y="30.5" width="11" height="11" rx="2.2" fill="#5eead4"/>
+</svg>

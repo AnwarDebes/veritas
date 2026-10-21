@@ -1,0 +1,10 @@
+{
+  "name": "veritas-live-prover",
+  "private": true,
+  "type": "module",
+  "description": "The VERITAS method in the browser: a SAT solver that proves, breaks and repairs a prompt-injection guard.",
+  "scripts": {
+    "test": "node --test tests/solver.test.mjs tests/guard.test.mjs"
+  },
+  "license": "MIT"
+}
