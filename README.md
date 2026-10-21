@@ -117,7 +117,7 @@ All numbers come from `python experiments/run_all.py` on a single CPU, over 8 se
 | **Verifier soundness** (E1) | z3, PySAT and brute force agree on **17/17** cross-checked queries, so a verdict never rests on a single solver |
 | **Verification vs red-teaming** (E2) | verification **certifies** the robust tokens (no red team can, at any budget) and finds a bypass for the rest, deciding every case in ~66 ms/token; red-teaming certifies _nothing_ |
 | **Constructive repair** (E3) | empirical retraining stalls at **8** provable bypasses (and loses accuracy, 0.69 to 0.57); constructive repair reaches **0** with accuracy preserved (0.69 to 0.71) |
-| **Verified abstention** (E4) | under shift, plain accuracy collapses **0.899 to 0.505**, _silently_; the envelope provides a **provably-sound** abstention boundary (sound in **100%** of runs) that escalates silently-missed attacks. Honest caveat: a coverage-matched uncertified threshold _recovers more_, so the contribution is the **certified boundary**, not the recovery rate |
+| **Verified abstention** (E4) | under shift, plain accuracy collapses **0.899 to 0.505**, _silently_; the envelope provides a **provably-sound** abstention boundary (sound in **100%** of runs) that escalates silently-missed attacks. Caveat: a coverage-matched uncertified threshold _recovers more_, so the contribution is the **certified boundary**, not the recovery rate |
 | **Assurance certificate** (E5) | 6 tamper classes plus forgery detected at **100%**; every counterexample independently re-evaluable with no solver |
 | **Systems** (E6) | PySAT decides an invariant in **3.6 ms** vs 51 ms for z3; verification cost grows gracefully with guard size |
 
@@ -134,7 +134,7 @@ All numbers come from `python experiments/run_all.py` on a single CPU, over 8 se
 | `experiments/` | six reproducible experiments (E1 to E6) |
 | `paper/veritas.tex` | the paper source |
 
-## Honest limitations
+## Limitations
 
 This is v1.0, and we are explicit about what does **not** hold yet:
 
