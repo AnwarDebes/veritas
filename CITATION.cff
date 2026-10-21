@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "VERITAS"
+type: software
+authors:
+  - family-names: "Debes"
+    given-names: "Anwar"
+repository-code: "https://github.com/AnwarDebes/veritas"
+license: MIT
+preferred-citation:
+  type: report
+  title: "VERITAS: Formally Verified, Competence-Aware Interpretable Guardrails for Language Models"
+  authors:
+    - family-names: "Debes"
+      given-names: "Anwar"
+  year: 2026
+  url: "https://github.com/AnwarDebes/veritas/blob/main/paper/veritas.pdf"
