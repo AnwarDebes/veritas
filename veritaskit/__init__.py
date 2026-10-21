@@ -32,7 +32,7 @@ from .ledger import (AssuranceLedger, AssuranceCertificate, verify_assurance,
                      guard_fingerprint, encoding_from_fingerprint)
 from .engine import VeritasEngine, Specification
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 __all__ = [
     "ContentGuard", "ContentGuardConfig", "ContentVerdict",
