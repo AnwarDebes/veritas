@@ -36,7 +36,14 @@ an auditor re-checks without ever trusting the prover.
 
 **[Open the live prover](https://anwardebes.github.io/veritas/)**, the method running in your browser on a real prompt-injection guard.
 
+<a href="https://anwardebes.github.io/veritas/"><img src="docs/film-preview.webp" width="100%" alt="VERITAS: a prompt-injection guard blocks ignore previous instructions, and the film asks about every possible input. Click to open the live prover."></a>
+
+<details>
+<summary>▶ Watch the 47-second film with sound</summary>
+
 https://github.com/user-attachments/assets/3a0f45d6-cfc5-4cac-93de-79925487d50b
+
+</details>
 
 Type an attack and the page states a claim: *every prompt that contains these words is blocked*. A SAT solver written for the page checks it against all 2<sup>256</sup> inputs the guard can see. On the shipped [TRACE](https://github.com/AnwarDebes/TRACE) guard it finds a bypass in under a second (*"Which ignore previous instructions"* gets through), repairs the guard with one weighted clause, proves the repaired guard, and re-checks that proof without the solver. Download the formula and the proof and run `drat-trim` on them yourself.
 
