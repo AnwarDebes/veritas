@@ -28,6 +28,8 @@ when one fails, **repair** that bypass by construction, **abstain** (provably) w
 the guard has no audited competence, and seal the entire argument into a certificate
 an auditor re-checks without ever trusting the prover.
 
+▶ See this project in the film *Show Its Work*: https://youtu.be/pefnyZ-oCcM?t=581
+
 </div>
 
 ---
@@ -129,6 +131,9 @@ ok, info = verify_assurance(ledger, cert, key=KEY)            # auditor re-check
 ## Headline results
 
 All numbers come from `python experiments/run_all.py` on a single CPU, over 8 seeds.
+The raw outputs are in [`results/`](results/) (one JSON file per experiment), and
+`scripts/paper_numbers.py` collects them into [`paper/_numbers.tex`](paper/_numbers.tex),
+the values the paper and this table use.
 
 | Experiment | Result |
 |---|---|
@@ -155,7 +160,7 @@ All numbers come from `python experiments/run_all.py` on a single CPU, over 8 se
 
 ## Limitations
 
-This is v1.0, and we are explicit about what does **not** hold yet:
+This is v1.1, and we are explicit about what does **not** hold yet:
 
 - **Feature-space verification.** We verify over booleanised feature vectors (the
   guard's actual input), not raw strings; mapping a counterexample back to a worst-case
