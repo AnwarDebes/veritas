@@ -30,6 +30,8 @@ an auditor re-checks without ever trusting the prover.
 
 ▶ See this project in the film *Show Its Work*: https://youtu.be/pefnyZ-oCcM?t=581
 
+▶ Watch it in 40 seconds: https://anwardebes.github.io/shorts/#veritas
+
 </div>
 
 ---
