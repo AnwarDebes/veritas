@@ -32,6 +32,8 @@ an auditor re-checks without ever trusting the prover.
 
 ▶ Watch it in 40 seconds: https://anwardebes.github.io/shorts/#veritas
 
+▶ The follow-up, retraining on its own failures (45 seconds): https://anwardebes.github.io/shorts/#retrain
+
 </div>
 
 ---
